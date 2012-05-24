@@ -1,3 +1,4 @@
+#!/usr/bin/python2.7
 
 ##################################################################
 #     Interface pour l'emulation de la carte STM32LDiscovery     #  
@@ -200,7 +201,7 @@ class Ctrl:
         if self.connBouton != None :
             self.connBouton.send(struct.pack('B',0))
         else :
-            self.ui.log.insert(Tkinter.END,"User button not connected")
+            self.ui.log.insert(Tkinter.END,"User button not connected\n")
         
     def traiterrecv(self,conn):
         while 1:
